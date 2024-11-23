@@ -148,11 +148,11 @@ namespace todocx
                     }
                     if (text.Text.Contains("ExcitationTime"))
                     {
-                        text.Text = text.Text.Replace("ExcitationTime", (excitationtime=="0")?"—":excitationtime);
+                        text.Text = text.Text.Replace("ExcitationTime", (intermittentExp == "0")?"—":excitationtime);
                     }
                     if (text.Text.Contains("IntervalTime"))
                     {
-                        text.Text = text.Text.Replace("IntervalTime", (intervaltime=="0")?"—":intervaltime);
+                        text.Text = text.Text.Replace("IntervalTime", (intermittentExp == "0")?"—":intervaltime);
                     }
                 }
 

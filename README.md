@@ -5,6 +5,7 @@ A simple tool to convert xml and cvs files to docx files with a template docx fi
 ## prerequisites
 
 - vs2017 with c++ support
+- [nuget](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe) package manager for vs2017 or later
 - c# 3.5 framework or higher
 
 ## how to use
@@ -18,3 +19,20 @@ A simple tool to convert xml and cvs files to docx files with a template docx fi
 e.g.
 
 todocx.exe -s summary.xml -i datalist.csv -t template.docx
+
+## how to build
+
+1. open the solution file todocx.sln
+2. build the solution
+
+## deploy with cmake
+
+```bash
+$ git clone url todocx.git
+$ cd todocx
+$ cmake . -B out\package -DCMAKE_BUILD_TYPE="Release"
+$ cmake --build out\package --config Release
+```
+
+open explorer and go to `todocx\out\package` folder, you will see `todocx-x.x.x-win32.exe` file.
+
