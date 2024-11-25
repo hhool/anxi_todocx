@@ -372,6 +372,21 @@ namespace todocx
         /// <param name="templatePath">The path to the template DOCX file.</param>
         public int GenerateDocx(string xmlPath, string csvPath, string templatePath)
         {
+            // check if the xmlPath file exists
+            if (!File.Exists(xmlPath))
+            {
+                return -1;
+            }
+            // check if the csvPath file exists
+            if (!File.Exists(csvPath))
+            {
+                return -2;
+            }
+            // check if the templatePath file exists
+            if (!File.Exists(templatePath))
+            {
+                return -3;
+            }
             // Read xmlPath data
             var xmlData = ReadXmlData(xmlPath);
 
