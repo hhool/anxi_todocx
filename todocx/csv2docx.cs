@@ -273,8 +273,8 @@ namespace todocx
                         // make the table middle align in the page
                         var tableJustification = new DocumentFormat.OpenXml.Wordprocessing.TableJustification { Val = DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues.Center };
                         table.AppendChild(tableJustification);
-                        // make the table width 100% of the page
-                        var tableWidth = new DocumentFormat.OpenXml.Wordprocessing.TableWidth { Type = DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues.Pct, Width = "100%" };
+                        // make the table width 100% of the page that office 2007 can support
+                        var tableWidth = new DocumentFormat.OpenXml.Wordprocessing.TableWidth { Width = "5000", Type = DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues.Pct };
                         table.AppendChild(tableWidth);
                         // create a table row for the header
                         var headerRow = new DocumentFormat.OpenXml.Wordprocessing.TableRow();
