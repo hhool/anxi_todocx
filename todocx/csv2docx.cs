@@ -404,6 +404,8 @@ namespace todocx
             string intermittentExp = xmlData["IntermittentExp"];
             string excitationtime = xmlData["ExcitationTime"];
             string intervaltime = xmlData["IntervalTime"];
+            excitationtime += "00";
+            intervaltime += "00";
             // write intermittent experiment data to the template DOCX file
             WriteIntermittentExp(templatePath, intermittentExp, excitationtime, intervaltime);
 
